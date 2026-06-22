@@ -94,15 +94,15 @@ Lalu install APK yang dihasilkan.
 
 * Device Info
 
-![gambar](https://github.com/32gz/Tugas7-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-09%20141257.png)
+![gambar](https://github.com/32gz/Tugas8-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-22%20145818.png)
 
 * Indikator jaringan aktif
 
-![gambar](https://github.com/32gz/Tugas7-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-09%20141257.png)
+![gambar](https://github.com/32gz/Tugas8-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-22%20145843.png)
 
 * Indikator jaringan mati
 
-![gambar](https://github.com/32gz/Tugas7-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-09%20141257.png)
+![gambar](https://github.com/32gz/Tugas8-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-22%20145914.png)
 
 
 ## Video Demo

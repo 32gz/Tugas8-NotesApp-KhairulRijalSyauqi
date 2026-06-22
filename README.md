@@ -90,30 +90,20 @@ shared/src/
 ```
 Lalu install APK yang dihasilkan.
 
-### iOS
-Buka folder `/iosApp` di Xcode dan jalankan dari sana.
-
 ## Screenshots
 
-Tambahkan screenshot aplikasi di folder:
-```
-screenshots/
-├── android/
-│   ├── main.png
-│   ├── settings.png
-│   ├── network_online.png      # Status jaringan online
-│   └── network_offline.png     # Status jaringan offline
-└── ios/
-    ├── main.png
-    ├── settings.png
-    ├── network_online.png      # Status jaringan online
-    └── network_offline.png     # Status jaringan offline
-```
+* Device Info
 
-**Screenshot yang diperlukan:**
-- `settings.png` - Menampilkan Device Info (Platform, OS Version, Device, App Version)
-- `network_online.png` - Indikator jaringan aktif (hijau)
-- `network_offline.png` - Indikator jaringan mati (merah)
+![gambar](https://github.com/32gz/Tugas7-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-09%20141257.png)
+
+* Indikator jaringan aktif
+
+![gambar](https://github.com/32gz/Tugas7-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-09%20141257.png)
+
+* Indikator jaringan mati
+
+![gambar](https://github.com/32gz/Tugas7-NotesApp-KhairulRijalSyauqi/blob/main/Screenshot%202026-06-09%20141257.png)
+
 
 ## Video Demo
 

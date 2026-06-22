@@ -1,4 +1,7 @@
-# Tugas 8 - Notes App (Kotlin Multiplatform)
+# Tugas 8 - Notes App
+
+* Nama : Khairul Rijal Syauqi
+* NIM  : 123140143
 
 Aplikasi catatan sederhana dengan Kotlin Multiplatform untuk Android dan iOS.
 

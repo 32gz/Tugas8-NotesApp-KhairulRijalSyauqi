@@ -107,20 +107,8 @@ Lalu install APK yang dihasilkan.
 
 ## Video Demo
 
-Rekam video demo (45 detik) yang menunjukkan:
+**[Watch Demo Video](https://github.com/user-attachments/assets/19af2be3-e00e-4340-a4f0-3eda90bb87f8)**
 
-| Waktu | Konten |
-|-------|--------|
-| 0-15 detik | Inisialisasi Koin DI di App.android.kt / App.ios.kt |
-| 15-25 detik | Navigasi ke Settings → Tampilkan Device Info |
-| 25-35 detik | Tampilkan Network Indicator (Online - hijau) di layar utama |
-| 35-45 detik | Aktifkan Airplane Mode → Tampilkan Network Indicator (Offline - merah) |
 
-Simpan video demo di:
-```
-screenshots/
-├── android/
-│   └── demo.mp4
-└── ios/
-    └── demo.mp4
-```
+
+

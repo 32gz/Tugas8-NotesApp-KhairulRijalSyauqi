@@ -47,19 +47,3 @@ shared/src/
 ./gradlew :androidApp:assembleDebug
 ```
 Lalu install APK yang dihasilkan.
-
-### iOS
-Buka folder `/iosApp` di Xcode dan jalankan dari sana.
-
-##Screenshot
-
-Tambahkan screenshot aplikasi di folder:
-```
-screenshots/
-├── android/
-│   ├── main.png
-│   └── settings.png
-└── ios/
-    ├── main.png
-    └── settings.png
-```

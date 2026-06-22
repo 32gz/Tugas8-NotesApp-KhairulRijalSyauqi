@@ -1,4 +1,4 @@
-# Tugas 8 - Notes App
+# Tugas 8 - Notes App (Kotlin Multiplatform)
 
 * Nama : Khairul Rijal Syauqi
 * NIM  : 123140143
@@ -25,12 +25,51 @@ Aplikasi catatan sederhana dengan Kotlin Multiplatform untuk Android dan iOS.
 | Preferences | DataStore |
 | Navigation | Navigation Compose |
 
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    PRESENTATION LAYER                       │
+│   Screens (NotesList, AddNote, Settings, dll)              │
+│   ViewModels (NotesViewModel, SettingsViewModel)            │
+│   UI Components (NoteCard, NetworkStatusIndicator)        │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                      DOMAIN LAYER                           │
+│   Models (Note, UserSettings)                             │
+│   Interfaces (NotesRepository, DeviceInfo, NetworkMonitor)  │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                       DATA LAYER                            │
+│   Repository (NotesRepositoryImpl)                         │
+│   Database (SQLDelight)                                     │
+│   DataStore (Preferences)                                   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## expect/actual Pattern
+
+```
+DeviceInfo (commonMain)          NetworkMonitor (commonMain)
+        │                                │
+   expect interface                 expect interface
+        │                                │
+   ┌────┴────┐                    ┌────┴────┐
+   ▼         ▼                    ▼         ▼
+Android   iOS                Android     iOS
+(actual) (actual)            (actual)   (actual)
+```
+
 ## Struktur Proyek
 
 ```
 shared/src/
 ├── commonMain/kotlin/          # Kode yang dibagikan ke semua platform
 │   ├── App.kt                 # Main composable
+│   ├── DeviceInfo.kt          # expect interface
+│   ├── NetworkMonitor.kt      # expect interface
 │   ├── model/                  # Data model (Note, UserSettings)
 │   ├── repository/             # Repository
 │   ├── datastore/              # DataStore preferences
@@ -50,3 +89,48 @@ shared/src/
 ./gradlew :androidApp:assembleDebug
 ```
 Lalu install APK yang dihasilkan.
+
+### iOS
+Buka folder `/iosApp` di Xcode dan jalankan dari sana.
+
+## Screenshots
+
+Tambahkan screenshot aplikasi di folder:
+```
+screenshots/
+├── android/
+│   ├── main.png
+│   ├── settings.png
+│   ├── network_online.png      # Status jaringan online
+│   └── network_offline.png     # Status jaringan offline
+└── ios/
+    ├── main.png
+    ├── settings.png
+    ├── network_online.png      # Status jaringan online
+    └── network_offline.png     # Status jaringan offline
+```
+
+**Screenshot yang diperlukan:**
+- `settings.png` - Menampilkan Device Info (Platform, OS Version, Device, App Version)
+- `network_online.png` - Indikator jaringan aktif (hijau)
+- `network_offline.png` - Indikator jaringan mati (merah)
+
+## Video Demo
+
+Rekam video demo (45 detik) yang menunjukkan:
+
+| Waktu | Konten |
+|-------|--------|
+| 0-15 detik | Inisialisasi Koin DI di App.android.kt / App.ios.kt |
+| 15-25 detik | Navigasi ke Settings → Tampilkan Device Info |
+| 25-35 detik | Tampilkan Network Indicator (Online - hijau) di layar utama |
+| 35-45 detik | Aktifkan Airplane Mode → Tampilkan Network Indicator (Offline - merah) |
+
+Simpan video demo di:
+```
+screenshots/
+├── android/
+│   └── demo.mp4
+└── ios/
+    └── demo.mp4
+```
